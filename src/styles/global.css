@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=RocknRoll+One&family=Walter+Turncoat&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* --- Mint Brand Scale (50–900) --- */
+  --color-mint-50:  oklch(97%   0.010 177);
+  --color-mint-100: oklch(94%   0.020 177);
+  --color-mint-200: oklch(88%   0.035 177);
+  --color-mint-300: oklch(83%   0.045 177);
+  --color-mint-400: oklch(80%   0.055 177);
+  --color-mint-500: oklch(78.5% 0.058 177); /* Base */
+  --color-mint-600: oklch(70%   0.060 177);
+  --color-mint-700: oklch(60%   0.055 177);
+  --color-mint-800: oklch(50%   0.050 177);
+  --color-mint-900: oklch(40%   0.045 177);
+
+  /* Alias for quick use */
+  --color-mint: var(--color-mint-500);
+
+  /* 他の3色 */
+  --color-mint-light: oklch(88.91% 0.065 162.67); /* #B7E5CD */
+  --color-mint-soft:  oklch(78.47% 0.058 177.40); /* #8ABEB9 */
+  --color-mint-dark:  oklch(40.59% 0.056 239.28); /* #305669 */
+  --color-clay:       oklch(67.62% 0.112 46.03);  /* #C1785A */
+  --color-orange:     oklch(0.6877 0.1648 49.19);
+  --color-light-gray: oklch(0.954 0.0094 99.99);
+  --color-cream: oklch(97.9% 0.012 92);        /* #FBF8EF */
+
+  --font-rocknroll: "RocknRoll One", sans-serif;
+  --font-Mochiy: "Mochiy Pop P One", sans-serif;
+  --font-Walter: "Walter Turncoat", sans-serif;
+}
+
+@layer base {
+  body {
+    color: #333;
+  }
+
+  img {
+    -webkit-user-drag: none; /* Chrome, Safari, Opera */
+    -khtml-user-drag: none;  /* Konqueror */
+    -moz-user-drag: none;    /* Firefox */
+    -o-user-drag: none;      /* Opera */
+    user-drag: none;         /* Standard property */
+  }
+
+  /* UA スタイルを上書き */
+  dialog {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    max-height: none;
+    inset: 0;
+  }
+}
+
+@layer components {
+  .swiper-pagination {
+    position: relative !important;
+  }
+
+  .swiper-pagination-bullet {
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;
+  }
+}

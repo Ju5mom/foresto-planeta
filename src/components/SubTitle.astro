@@ -1,0 +1,11 @@
+---
+type Props = {
+  subTitle?: string;
+  marginBottom?: number;
+}
+
+const { subTitle, marginBottom = 0 } = Astro.props as Props;
+---
+<h3 class={`font-Walter inline-block text-gray-500 text-2xl font-bold tracking-wider mb-[${marginBottom}px]`}>
+  {subTitle ? <span set:html={subTitle} /> : <slot />}
+</h3>

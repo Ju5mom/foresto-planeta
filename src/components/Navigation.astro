@@ -1,0 +1,18 @@
+---
+import MenuList from "./MenuList.astro"
+---
+<button id="gNav__open" class="fixed top-5 right-5 z-10 w-30 cursor-pointer">
+  <img class="block w-full" src="/img/menu_icon.webp" alt="button icon">
+  <span class="font-Mochiy text-mint-soft text-sm font-bold tracking-widest">メニュー</span>
+</button>
+<dialog id="gNav" class="size-dvw fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-clay">
+
+  <nav class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <button autofocus id="gNav__close" class="absolute -top-20 -right-20 cursor-pointer">
+      <span class="text-light-gray tracking-widest text-xs font-bold"><ruby>閉<rp>(</rp><rt>と</rt><rp>)</rp></ruby>じる</span>
+      <img class="block w-10 h-10" src="/img/close-icon.svg" alt="閉じる">
+    </button>
+    <MenuList />
+  </nav>
+</dialog>
+

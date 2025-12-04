@@ -1,0 +1,17 @@
+---
+import { menuList } from "@/data/menu.ts";
+---
+<ul class="font-rocknroll text-light-gray tracking-widest md:text-2xl lg:text-5xl max-w-[800px]">
+  {
+
+    menuList.map((menu: any) => {
+      if (!menu) return null;
+      const { name, link } = menu;
+      return (
+          <li class="py-2.5 mb-5">
+            <a href={link} set:html={name}></a>
+          </li>
+      );
+    })
+  }
+</ul>

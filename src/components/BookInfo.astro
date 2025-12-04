@@ -1,0 +1,19 @@
+---
+import SubTitle from "./SubTitle.astro";
+const { book } = Astro.props;
+---
+<div class="inline-block text-left md:max-w-3xl mb-5">
+  <SubTitle marginBottom={20}>
+    <span set:html={book?.title} />
+    {book.subtitle && <span class="ml-2 text-sm" set:html={book.subtitle} />}
+  </SubTitle>
+  <div class="bg-mint-50 pt-5 px-5 pb-4 rounded-sm md:mb-5">
+    <p class="inline-block mb-4" set:html={book.description} />
+  </div>
+  
+  <div class="text-right text-gray-500 text-sm">
+    <span class="block">公開日：{book?.publishedAt}</span>
+    {book.updatedAt && <span set:html={`更新日：${book.updatedAt}`}></span>}
+  </div>
+  
+</div>

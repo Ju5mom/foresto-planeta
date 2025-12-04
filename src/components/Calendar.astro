@@ -1,0 +1,14 @@
+---
+const { lang = 'ja' } = Astro.props;
+---
+<div>
+  <time class="foresto-time" data-lang={ lang }>loading...</time>
+</div>
+
+<script>
+  import { renderNow } from '../scripts/calendar.js';
+  const el = document.querySelector<HTMLElement>("[data-lang]");
+  const lang = el?.dataset.lang;
+  // 初回表示
+  renderNow('.foresto-time', { locale: lang });
+</script>
