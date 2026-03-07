@@ -48,7 +48,7 @@ export const books: Book[] = [
     description:
       "サファイア<ruby>太砂<rp>(</rp><rt>たいさ</rt><rp>)</rp></ruby>のまちにまった夏休み‥！！<br>ちょうどエルネスト博士はラボでとある<ruby>発表<rp>(</rp><rt>はっぴょう</rt><rp>)</rp></ruby>をしようとしていた‥！",
 
-    publishedAt: "2026-02-23",
+    publishedAt: "2026-03-08",
     updatedAt: "",
 
     categories: "まんが",
