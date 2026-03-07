@@ -11,7 +11,7 @@ export const characters: Character[] = [
     roman: "Safaïa",
     slug: "safaia",
     description:
-      "<ruby>帯員<rp>(</rp><rt>たいいん</rt><rp>)</rp></ruby>をまとめるリーダー。<br>とても勇気がある。<br>ふるきよきものをあいする。",
+      "<ruby>隊員<rp>(</rp><rt>たいいん</rt><rp>)</rp></ruby>をまとめるリーダー。<br>とても勇気がある。<br>ふるきよきものをあいする。",
   },
   {
     kana: "トロップ・トロシー",
@@ -39,27 +39,27 @@ export const characters: Character[] = [
     roman: "Luli",
     slug: "luli",
     description:
-      "サファイアの部下。<br>心やさしい青年。<br>サファイアをそんけいしている。",
+      "<ruby>隊員<rp>(</rp><rt>たいいん</rt><rp>)</rp></ruby>でサファイアの部下。<br>心やさしい青年。<br>サファイアをそんけいしている。",
   },
   {
-    kana: "モルモール",
+    kana: "モルモル",
     roman: "Molmol",
     slug: "molmol",
     description:
-      "<ruby>帯員<rp>(</rp><rt>たいいん</rt><rp>)</rp></ruby>みならい。<br>食べることが大好き。<br>サファイアの<ruby>甥<rp>(</rp><rt>おい</rt><rp>)</rp></ruby>っ子。",
+      "<ruby>隊員<rp>(</rp><rt>たいいん</rt><rp>)</rp></ruby>みならい。<br>食べることが大好き。<br>サファイアの<ruby>甥<rp>(</rp><rt>おい</rt><rp>)</rp></ruby>っ子。",
   },
   {
     kana: "ドゥゴー",
     roman: "Dugoò",
     slug: "dugoo",
     description:
-      "こんちゅう惑星の王様。<br>宇宙アンティークに目がない。<br>クーデターでネルネルを<ruby>退位<rp>(</rp><rt>たいい</rt><rp>)</rp></ruby>させた。",
+      "こんちゅう<ruby>惑星<rp>(</rp><rt>わくせい</rt><rp>)</rp></ruby>の王様。<br>宇宙アンティークに目がない。<br>クーデターでネルネルを<ruby>退位<rp>(</rp><rt>たいい</rt><rp>)</rp></ruby>させた。",
   },
   {
     kana: "ネルネル",
     roman: "Nérunëru",
     slug: "neruneru",
     description:
-      "元こんちゅう惑星の王様。<br>じぶんがだいすき<br>フォレストへ<ruby>亡命<rp>(</rp><rt>ぼうめい</rt><rp>)</rp></ruby>してきた。",
+      "元こんちゅう<ruby>惑星<rp>(</rp><rt>わくせい</rt><rp>)</rp></ruby>の王様。<br>じぶんがだいすき<br>フォレストへ<ruby>亡命<rp>(</rp><rt>ぼうめい</rt><rp>)</rp></ruby>してきた。",
   },
 ];

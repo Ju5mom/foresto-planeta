@@ -2,9 +2,11 @@
 const pageTitle = Astro.props;
 import { menuList } from "@/data/menu.ts";
 ---
-<footer class="bg-clay">
-  <div class="flex justify-around items-center md:py-20">
-    <img class="block shrink w-80 h-auto md:mb-8" src="/img/logo_white.webp" alt="" />
+<footer class="bg-clay py-10">
+  <div class="flex flex-col md:flex-row justify-around items-center md:py-20">
+    <a href="/">
+      <img class="block shrink w-80 h-auto mb-5 md:mb-8" src="/img/logo_white.webp" alt="" />
+    </a>
     <ul class="py-5">
       {
         menuList.map((menu: any) => {
@@ -12,7 +14,7 @@ import { menuList } from "@/data/menu.ts";
           const { name, link } = menu;
           return (
               <li>
-                <a class="block text-light-gray text-base/8 font-bold" href={link} set:html={name}></a>
+                <a class="block text-light-gray text-2xl/loose font-bold" href={link} set:html={name}></a>
               </li>
           );
         })
@@ -20,7 +22,7 @@ import { menuList } from "@/data/menu.ts";
       <li class="mt-5"><a class="block w-8" href="https://github.com/Ju5mom/" target="_blank"><img class="block w-full" src="/img/github-mark-white.svg" alt="github"></a></li>
     </ul>
   </div>
-  <p class="text-light-gray text-sm text-center">© 2025 Ju5mom – <span class="uppercase">Foresto Planeta Project</span></p>
+  <p class="text-light-gray text-sm text-center">© 2026 Ju5mom – <span class="uppercase">Foresto Planeta Project</span></p>
   
   
 </footer>

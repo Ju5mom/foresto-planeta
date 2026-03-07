@@ -2,13 +2,13 @@
 import SubTitle from "./SubTitle.astro";
 const { book } = Astro.props;
 ---
-<div class="inline-block text-left md:max-w-3xl mb-5">
-  <SubTitle marginBottom={20}>
-    <span set:html={book?.title} />
-    {book.subtitle && <span class="ml-2 text-sm" set:html={book.subtitle} />}
+<div class="inline-block text-left px-4 md:px-0 md:max-w-3xl mb-5">
+  <SubTitle>
+    <span class="mb-4" set:html={book?.title} />
+    {book.subtitle && <span class="text-sm block md:inline-block md:ml-2" set:html={book.subtitle} />}
   </SubTitle>
   <div class="bg-mint-50 pt-5 px-5 pb-4 rounded-sm md:mb-5">
-    <p class="inline-block mb-4" set:html={book.description} />
+    <p class="inline-block mb-4 text-base/8 tracking-wide" set:html={book.description} />
   </div>
   
   <div class="text-right text-gray-500 text-sm">

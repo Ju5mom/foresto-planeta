@@ -10,15 +10,14 @@ import { books, getLatestBook } from "@/data/books";
 const latestBook = getLatestBook(books);
 import BookInfo from "@/components/BookInfo.astro";
 import Ju5mom from "@/components/ruby-text/Ju5mom.astro";
-import SubTitle from "@/components/subTitle.astro";
 
 const pageTitle = "惑星 フォレスト";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<section class="py-50">
-    <h1 class="text-center mb-20">
-      <img class="inline-block max-w-4xl mb-10 md:mb-16" src="/img/logo.svg" alt="">
+	<section class="bg-[url(/img/mv.webp)] bg-cover bg-no-repeat bg-center bg-[rgba(255,255,255,.5)] bg-blend-lighten aspect-square md:aspect-video flex justify-center items-center">
+    <h1 class="text-center mx-auto py-8 px-4 max-w-xl md:py-0 xl:max-w-4xl">
+      <img class="inline-block w-full mb-4 md:mb-16" src="/img/logo.svg" alt="">
       <div class="text-mint-soft tracking-widest">
         <span class="uppercase block font-Walter text-2xl">Foresto Planeta</span>
       </div>
@@ -26,32 +25,29 @@ const pageTitle = "惑星 フォレスト";
 
   </section>
 
-  <section class="bg-cream text-center py-5 md:py-18">
-    <div class="inline-block max-w-7xl px-5 mx-aut">
-      <SectionTitle heading="<ruby>今日<rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>のフォレストシティ" />
+  <section class="bg-cream text-center py-7 md:py-18">
+    <div class="px-5 mx-aut">
+      <SectionTitle heading="<ruby>今日<rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>のフォレストのこよみ" />
       <Calendar lang="ja"/>
     </div>
     
   </section>
 
-  <section id="about_foresto" class="mx-auto text-center py-5 md:py-18">
+  <section id="about_foresto" class="mx-auto text-center px-4 py-7 md:py-18">
     <SectionTitle heading="<ruby>惑星<rp>(</rp><rt>わくせい</rt><rp>)</rp></ruby>フォレストとは" />
-    <p class="inline-block text-left text-base/7">ちきゅうから光の速さで移動しても何百万年もかかる宇宙の銀河のひとつ、<a href="#">エスペッシャー銀河</a>にある緑の惑星。<br>そこには、緑や青、黄色のふわふわな生き物や"こんちゅう人（びと）"や、"おやさい人"、"かじつ人"が暮らしている。</p>
+    <p class="inline-block text-left text-base/8 tracking-wide">ちきゅうから光の速さで移動しても何百万年もかかる宇宙の銀河のひとつ、<a href="#">エスペッシャー銀河</a>にある緑の惑星。<br>そこには、緑や青、黄色のふわふわな生き物や"こんちゅう人（びと）"や、"おやさい人"、"かじつ人"が暮らしている。</p>
   </section>
 
-  <section class="bg-cream text-center py-5 md:py-18">
-    <div class="inline-block max-w-7xl ">
+  <section id="characters" class="bg-cream text-center py-7 md:py-18">
+    <div class="inline-block max-w-7xl px-4 xl:px-0">
       <SectionTitle heading="おもなキャラクター" />
-        <div class="grid grid-cols-3 gap-5">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-5">
           <Card characters={characters} />
         </div>
     </div>
-    
-    
-    
   </section>
 
-  <section class="text-center py-5 md:py-18">
+  <section class="text-center px-0 py-7 md:py-18">
     <SectionTitle heading="<ruby>公開<rp>(</rp><rt>こうかい</rt><rp>)</rp></ruby>されたストーリー" />
     <BookInfo book={latestBook} />
     <div class="mb-10">
@@ -60,16 +56,19 @@ const pageTitle = "惑星 フォレスト";
 
   </section>
 
-  <section id="about" class="bg-cream text-center py-5 md:py-18">
-    <SectionTitle heading="このサイト <ruby>＆<rp>(</rp><rt>アンド</rt><rp>)</rp></ruby> おはなしをつくった人" />
-    <SubTitle marginBottom={40}>
-      <span><Ju5mom /> &amp; R たん</span>
-    </SubTitle>
-    <div class="w-70 rounded-sm overflow-hidden mx-auto md:my-7">
-      <img class="inline-block w-full" src="/img/about.webp" alt="Ju5mom と Rたん">
+  <section id="about" class="bg-cream text-center py-7 md:py-18">
+    <div class="px-4 md:px-0">
+      <SectionTitle heading="このサイトについて" />
+      <h3 class="font-Walter text-gray-500 text-xl md:text-2xl font-bold tracking-wider mb-5">
+        <span>さくしゃ：<Ju5mom /> &amp; R たん</span>
+      </h3>
+      <div class="w-70 rounded-sm overflow-hidden mx-auto my-7">
+        <img class="inline-block w-full" src="/img/about.webp" alt="Ju5mom と Rたん">
+      </div>
+      
+      <p class="inline-block md:max-w-3xl text-left text-base/8 tracking-wide"><Ju5mom /> が、その息子の R たんに、夜ねるまえに、おはなししてきたことをまとめてます。<br>R たんは、おはなしのプロデューサーでもあります！<br><Ju5mom /> が、このサイトぜんたいの<ruby>開発<rp>(</rp><rt>かいはつ</rt><rp>)</rp></ruby>を担当してます。ソースコードは <a class="text-orange underline" href="https://github.com/Ju5mom/" target="_blank"><ruby>Github<rp>(</rp><rt>ギットハブ</rt><rp>)</rp></ruby></a> で公開しています。</p>
     </div>
     
-    <p class="inline-block md:max-w-3xl text-left text-base/8"><Ju5mom /> が、その息子の R たんに、夜ねるまえに、おはなししてきたことをまとめてます。<br>R たんは、おはなしのプロデューサーでもあります！<br><Ju5mom /> が、このサイトぜんたいの<ruby>開発<rp>(</rp><rt>かいはつ</rt><rp>)</rp></ruby>を担当してます。ソースコードは <a href="https://github.com/Ju5mom/" target="_blank"><ruby>Github<rp>(</rp><rt>ギットハブ</rt><rp>)</rp></ruby></a> で公開しています。</p>
 
   </section>
 </BaseLayout>

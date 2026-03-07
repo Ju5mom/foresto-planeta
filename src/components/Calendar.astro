@@ -1,8 +1,37 @@
 ---
 const { lang = 'ja' } = Astro.props;
 ---
-<div>
-  <time class="foresto-time" data-lang={ lang }>loading...</time>
+<div class="flex justify-center">
+  <time class="hidden foresto-time text-gray-500 font-bold text-base md:text-2xl" data-lang={ lang }></time>
+  <table id="foresto-time-table"
+        class="text-left table-auto border-collapse border border-clay text-base md:text-xl tracking-wide
+        [&_th]:p-2 md:[&_th]:p-4 [&_th]:border-2 [&_th]:border-orange
+        [&_td]:p-2 md:[&_td]:p-4 [&_td]:border-2 [&_td]:border-orange">
+    <tbody>
+      <tr>
+        <th class="border-2 border-clay bg-clay-soft text-gray-700">森暦（ しんれき ）</th>
+        <td data-foresto="year">loading...</td>
+      </tr>
+      <tr>
+        <th class="bg-clay-soft text-gray-700">日にち</th>
+        <td data-foresto="date">loading...</td>
+      </tr>
+      <tr>
+        <th class="bg-clay-soft text-gray-700">ようび</th>
+        <td>
+          <div class="flex justify-start items-center">
+            <img data-foresto="weekday-icon" class="h-10 mr-2" src="#" alt="">
+            <span data-foresto="weekday-text" class="">loading...</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th class="bg-clay-soft text-gray-700">じかん</th>
+        <td data-foresto="time">loading...</td>
+      </tr>
+    </tbody>
+  </table>
+    <!-- loading... -->
 </div>
 
 <script>
@@ -10,5 +39,5 @@ const { lang = 'ja' } = Astro.props;
   const el = document.querySelector<HTMLElement>("[data-lang]");
   const lang = el?.dataset.lang;
   // 初回表示
-  renderNow('.foresto-time', { locale: lang });
+  renderNow("#foresto-time-table", ".foresto-time", { locale: lang });
 </script>

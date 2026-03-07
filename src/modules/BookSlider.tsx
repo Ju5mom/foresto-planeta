@@ -20,6 +20,8 @@ const BookSlider: React.FC<Props> = ({ book }) => {
     modules: [Navigation, Pagination, Scrollbar, A11y],
     slidesPerView: 1,
     spaceBetween: 10,
+    loop: false,
+    loopAdditionalSlides: 1,
     navigation: {
       prevEl: "#slide__button-prev",
       nextEl: "#slide__button-next",
@@ -30,19 +32,19 @@ const BookSlider: React.FC<Props> = ({ book }) => {
         return '<span class="' + className + '">' + (index + 1) + "</span>";
       },
     },
+
     a11y: { enabled: true },
-    loop: false,
+
   };
 
 
 
   return (
     <div>
-      
-      <div className="flex justify-center items-center">
+      <div className="flex flex-wrap md:flex-nowrap justify-between md:justify-center items-center">
         <button
           id="slide__button-prev"
-          className="inline-block cursor-pointer w-[60px] h-[60px] flex-none mr-5 bg-mint-800 text-white rounded-full"
+          className="order-2 md:order-1 inline-block cursor-pointer w-[60px] h-[60px] flex-none ml-5 md:ml-0 md:mr-5 bg-mint-800 text-white rounded-full"
         >
           <ruby>
             前<rp>(</rp>
@@ -51,14 +53,13 @@ const BookSlider: React.FC<Props> = ({ book }) => {
           </ruby>
           へ
         </button>
-        <div className="shrink w-full md:max-w-3xl shadow-2xl">
+        <div className="w-full md:flex-1 order-1 md:order-2 min-w-0 max-w-full lg:max-w-3xl mb-8 md:mb-0">
           <Swiper
             {...options}
-            className="w-full md:max-w-3xl shadow-2xl
+            className="w-full shadow-md
                   [--swiper-pagination-bullet-size:20px]
                   [--swiper-pagination-bullet-width:20px]
                   [--swiper-pagination-bullet-height:20px]
-                  [--swiper-pagination-bottom:-15px]
                   [--swiper-pagination-bullet-inactive-opacity:0.2]
                   [--swiper-pagination-bullet-horizontal-gap:10px]"
           >
@@ -66,17 +67,15 @@ const BookSlider: React.FC<Props> = ({ book }) => {
               <SwiperSlide key={src}>
                 <figure>
                   <img src={src} alt={alt ?? ""} />
-                  {alt ? <figcaption>{alt}</figcaption> : null}
+                  {alt ? <figcaption className="block p-4 md:mb-4 text-left">{alt}</figcaption> : null}
                 </figure>
               </SwiperSlide>
             ))}
-
-            <div className="pb-5"></div>
           </Swiper>
         </div>
         <button
           id="slide__button-next"
-          className="inline-block cursor-pointer w-[60px] h-[60px] flex-none ml-5 bg-mint-800 text-white rounded-full"
+          className="order-3 inline-block cursor-pointer w-[60px] h-[60px] flex-none mr-5 md:mr-0 md:ml-5 bg-mint-800 text-white rounded-full"
         >
           <ruby>
             次<rp>(</rp>

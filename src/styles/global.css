@@ -22,6 +22,8 @@
   --color-mint-soft:  oklch(78.47% 0.058 177.40); /* #8ABEB9 */
   --color-mint-dark:  oklch(40.59% 0.056 239.28); /* #305669 */
   --color-clay:       oklch(67.62% 0.112 46.03);  /* #C1785A */
+  --color-clay-soft:  oklch(82% 0.06 46.03);
+  --color-clay-light: oklch(92% 0.02 46.03);
   --color-orange:     oklch(0.6877 0.1648 49.19);
   --color-light-gray: oklch(0.954 0.0094 99.99);
   --color-cream: oklch(97.9% 0.012 92);        /* #FBF8EF */
@@ -52,21 +54,55 @@
     max-height: none;
     inset: 0;
   }
+
+  a {
+    transition: all .2s ease-in-out;
+  }
+
+  a:hover {
+    opacity: .7;
+  }
+
+  img {
+    pointer-events: none;
+    -webkit-touch-callout: none;
+  }
 }
 
 @layer components {
+  .swiper img {
+    -webkit-touch-callout: none;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
   .swiper-pagination {
+    display: none;
     position: relative !important;
+    text-align: left !important;
+    height: 48px;
+  }
+
+  @media screen and (min-width:768px) {
+    .swiper-pagination {
+      display: block;
+    }
   }
 
   .swiper-pagination-bullet {
     line-height: 20px;
     font-size: 12px;
     color: #fff !important;
+    text-align: center !important;
   }
 
   .swiper-pagination-bullet-active {
     color: #fff;
-    background: #007aff;
+    background: var(--color-mint-800) !important;
+  }
+
+  .swiper-button-disabled {
+    opacity: .3;
+    cursor: default !important;
   }
 }
