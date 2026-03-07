@@ -153,7 +153,7 @@ export const toForesto = (dateEarth = new Date()) => {
   const weekdayIndex = weekdayIndexWithinYear(dayOfYear);
   const weekdayJP = weekdayIndex === null ? null : CONFIG.WEEKDAYS_JP[weekdayIndex];
   const weekdayEN = weekdayIndex === null ? null : CONFIG.WEEKDAYS_EN[weekdayIndex];
-  const weekdayIconSrc = weekdayIndex === null ? null : `/img/weekday-icons/${weekdayIndex}.webp`;
+  const weekdayIconSrc = weekdayIndex === null ? null : `./img/weekday-icons/${weekdayIndex}.webp`;
 
   const totalSeconds = Math.floor(dayFraction * CONFIG.HOURS_PER_FORESTO_DAY * 3600);
   const hour = Math.floor(totalSeconds / 3600);
@@ -224,7 +224,7 @@ const renderForestoTable = (tableObj, forestoNow, locale = 'ja') => {
         CONFIG.RAINBOW_MODE === 'rainbow' ? 'Rainbowday' : '(no weekday)';
       tableObj.date.textContent = `${forestoNow.rainbowIndex} Rainbow Day`;
       tableObj.weekdayText.textContent = weekdayLabel;
-      tableObj.weekdayIcon.src = "/img/weekday-icons/7.webp"; // 虹曜日のアイコンパス
+      tableObj.weekdayIcon.src = "./img/weekday-icons/7.webp"; // 虹曜日のアイコンパス
       tableObj.time.textContent = formatClockEN(forestoNow.time.hour, forestoNow.time.minute);
     } else {
       const weekdayLabel =
@@ -232,10 +232,10 @@ const renderForestoTable = (tableObj, forestoNow, locale = 'ja') => {
 
       tableObj.date.textContent = `虹の${forestoNow.rainbowIndex}日`;
       tableObj.weekdayText.textContent = weekdayLabel;
-      tableObj.weekdayIcon.src = "/img/weekday-icons/7.webp"; // 虹曜日のアイコンパス
+      tableObj.weekdayIcon.src = "./img/weekday-icons/7.webp"; // 虹曜日のアイコンパス
       tableObj.time.textContent = formatClockJP(forestoNow.time.hour, forestoNow.time.minute);
     }
-    
+
   } else { // 通常期間
     const month = forestoNow.month;
     const day = forestoNow.day;

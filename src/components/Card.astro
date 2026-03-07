@@ -10,7 +10,7 @@ const { characters } = Astro.props;
         return (
           <div class="flex items-center justify-center py-4 rounded-xs overflow-hidden border-t border-dotted border-clay lg:border-none lg:py-0">
             <div class="shrink w-26 aspect-square mb-2 overflow-hidden rounded-full">
-              <img class="block w-full" src={ `/img/character/${ slug }.webp` } alt=`${ kana }（${ roman }）` />
+              <img class="block w-full" src={ `./img/character/${ slug }.webp` } alt=`${ kana }（${ roman }）` />
             </div>
               
             <div class="flex-1 pl-4 md:pl-8 text-left">
