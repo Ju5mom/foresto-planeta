@@ -14,7 +14,7 @@ https://ju5mom.github.io/foresto-planeta/
 
 ## 📖 About the Project
 
-The stories take place on the distant planet **Foresto**, located in the Espercher Galaxy far away in space.
+The stories take place on the distant planet **Foresto**, located in **the Espercher Galaxy** far away in space.
 
 ちきゅうから光の速さで進んでも、何百万年もかかる遠い宇宙。
 その銀河のひとつ、**エスペッシャー銀河**に緑の**惑星フォレスト**があります。
