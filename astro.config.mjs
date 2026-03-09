@@ -12,6 +12,6 @@ export default defineConfig({
   },
   integrations: [react()],
 
-  site: 'https://Ju5mom.github.io',
+  site: 'https://ju5mom.github.io',
   base: '/foresto-planeta/'
 });

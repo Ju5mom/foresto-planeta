@@ -11,11 +11,14 @@ const latestBook = getLatestBook(books);
 import BookInfo from "@/components/BookInfo.astro";
 import Ju5mom from "@/components/ruby-text/Ju5mom.astro";
 
-const pageTitle = "惑星 フォレスト";
+const pageTitle = "惑星フォレスト（Foresto planeta）｜ 子ども向けのSF物語を漫画と絵本形式で描く創作プロジェクト";
+const pageDescription = "惑星フォレスト（Foresto planeta）は、子ども向けのSF物語を漫画と絵本形式で少しずつ公開していく創作プロジェクト。地球から遠く離れた銀河の星々に住むひとびとの物語を描きます。作者が自分の子どもに夜おはなしする物語が原作です。";
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL("img/ogp.jpg", Astro.site + import.meta.env.BASE_URL);
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-	<section class="bg-[url(/img/mv.webp)] bg-cover bg-no-repeat bg-center bg-[rgba(255,255,255,.5)] bg-blend-lighten aspect-square md:aspect-video flex justify-center items-center">
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription} url={canonical} ogImage={ogImage}>
+	<section style={`background-image: url(${import.meta.env.BASE_URL}img/mv.webp)`} class="bg-cover bg-no-repeat bg-center bg-[rgba(255,255,255,.5)] bg-blend-lighten aspect-square md:aspect-video flex justify-center items-center">
     <h1 class="text-center mx-auto py-8 px-4 max-w-xl md:py-0 xl:max-w-4xl">
       <img class="inline-block w-full mb-4 md:mb-16" src="./img/logo.svg" alt="">
       <div class="text-mint-soft tracking-widest">
