@@ -15,6 +15,7 @@ const { pageTitle, pageDescription, url, ogImage } = Astro.props;
 		<title>{pageTitle}</title>
 		<meta name="description" content={pageDescription} />
 		<link rel="canonical" href={url} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 		<!-- OGP -->
 		<meta property="og:title" content={pageTitle} />
 		<meta property="og:description" content={pageDescription} />
